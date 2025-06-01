@@ -1,0 +1,107 @@
+
+  
+  /* Bannière */
+  .banner {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Contenu principal */
+  .services-main {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .services-main h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .services-main p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+ .blue-line {
+  width: 20%;
+  margin: 20px auto;
+  border: none;
+  border-top: 3px solid rgb(0, 0, 255);
+}
+
+  
+  /* Section des services */
+  .service-blocks {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+  
+  .service-block {
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+  }
+
+.service-block:hover .icon {
+  color: #cde1f8;
+}
+  
+  .service-block h2 {
+    color:#333;
+    margin-top: 10px;
+  }
+  
+  .service-block p {
+    color: #666;
+    font-size: 1rem;
+  }
+  
+  .icon {
+    font-size: 40px;
+    color: blue;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .burger-icon {
+      display: flex !important;
+    }
+  
+    .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      text-align: center;
+      padding: 2rem 0;
+      transition: all 0.3s ease-in-out;
+    }
+  
+    .menu.active {
+      display: flex !important;
+    }
+  }
+  
+  /* Responsive pour écrans plus petits */
+@media (max-width: 900px) {
+  .service-blocks {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .service-block {
+      width: 80%; /* Ajuste la largeur des blocs en mode mobile */
+  }
+
+  .realisations-block img {
+      height: 200px; /* Ajuste la hauteur des images en mobile */
+  }
+}

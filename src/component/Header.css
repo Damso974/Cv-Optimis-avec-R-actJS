@@ -1,0 +1,142 @@
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1e1e1e;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 2rem;
+  box-sizing: border-box;
+  z-index: 1000;
+  
+}
+
+.Monlogo{
+  width: 60px;
+  height: 60px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar a {
+  color: #ccc;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+}
+
+.navbar a.active {
+  color: #ffffff;
+}
+
+.navbar a:not(.active) {
+  color: #ccc;
+}
+.navbar a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* Burger icon */
+.burger-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger-icon span {
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+}
+
+.burger-icon:hover span {
+  background-color: #ccc;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    display: none; /* Cacher le menu sur mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar.active ul {
+    display: flex !important; /* Afficher le menu quand actif */
+  }
+
+  .burger-icon {
+    display: flex; /* Afficher l'icône burger sur mobile */
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .menu.active {
+    max-height: 300px; /* Augmenter la hauteur du menu lorsque ouvert */
+  }
+
+  .menu li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .menu a {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .menu {
+    display: flex;
+  }
+
+  .burger-icon {
+    display: none; /* Cacher l'icône burger sur les grands écrans */
+  }
+}
+.logo {
+  cursor: pointer;
+}
+

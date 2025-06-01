@@ -1,0 +1,136 @@
+/* Style pour la page Mentions Légales */
+.legal-mentions {
+    padding: 90px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .blue-line {
+    width: 20%;
+    margin: 10px auto;
+    border-top: 3px solid #0d6efd;
+    padding-bottom: 50px;
+  }
+  
+  .legal-container {
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .legal-section {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  
+  .section-header {
+    font-size: 1rem;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: inset;
+  }
+  
+  .section-header.active {
+    color: #0d6efd;
+  }
+  
+  .chevron {
+    transition: transform 0.3s ease;
+  }
+  
+  .section-header.active .chevron {
+    transform: rotate(180deg);
+  }
+  
+  .section-content {
+    display: none;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .section-content h2 {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  /* icônes et textes */
+  .icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    margin-top: 10px;
+  }
+  
+  .icon-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .icon-item p {
+    font-size: 0.9rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .adresse p {
+    font-size: 0.9rem;
+    color: #333;
+    margin: 0;
+  }
+
+  /* numéro de téléphone et l'email en bleu */
+  .icon-item.phone p,
+  .icon-item.email p {
+    color: #0d6efd;
+  }
+  
+  .icon-item a {
+    color: #0d6efd;
+    text-decoration: none;
+  }
+  
+  .icon-item a:hover {
+    text-decoration: underline;
+  }
+  
+  .section-header.active + .section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .legal-container {
+      width: 90%;
+    }
+  
+    .section-header {
+      font-size: 1.5rem;
+    }
+  
+    .section-content h2 {
+      font-size: 1.8rem;
+    }
+  }
+  

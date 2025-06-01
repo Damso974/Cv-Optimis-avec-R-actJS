@@ -1,0 +1,154 @@
+/* Footer global */
+.footer {
+    background-color: #EEE;
+    padding: 40px 0;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Conteneur du footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Colonnes */
+.footer-column {
+    width: 22%;
+    text-align: left;
+}
+
+/* Titres */
+.footer h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+/* Listes */
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+/* Liens */
+.footer a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #007BFF; 
+}
+
+/* Icônes sociales */
+.footer-icons {
+    margin-top: 10px;
+}
+
+.footer-icons a {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #333;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-icons a:hover {
+    color: #007BFF;
+    transform: scale(1.1);
+}
+
+/* Bas du footer */
+.footer-bottom {
+    background-color: #1e1e1e ;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: relative;
+}
+
+/* Assurer que le footer est toujours en bas */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#root, .App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.App {
+    flex: 1;
+}
+
+.footer {
+    margin-top: auto; /* Pousse le footer en bas */
+}
+
+/* Style global du footer */
+.footer {
+    background-color: #EEE;
+    padding: 40px 0;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .footer-scroll-to-top {
+    position: fixed;
+    right: 20px;
+    top:70px;
+    background-color: #298eff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;  
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .footer-scroll-to-top.show {
+    display: block;
+  }
+  
+  .footer-scroll-to-top:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
+  
+/* Responsive */
+@media (max-width: 1024px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .footer-icons a {
+        font-size: 22px;
+    }
+}

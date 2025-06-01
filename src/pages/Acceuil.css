@@ -1,0 +1,196 @@
+#presentation {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 70px); 
+    background-color: transparent;
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  #presentation::before {
+    content: "";
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 0; 
+  }
+  
+  #presentation h1 {
+    font-size: 3.5rem; 
+    color: white; 
+    position: absolute;
+    top: 45%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1; 
+    margin: 0; 
+  }
+  
+  #presentation h2 {
+    font-size: 2.5rem;
+    color: white;
+    position: absolute; 
+    top: 58%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    margin: 0; 
+  }
+  
+  #presentation button {
+    background-color: #0d6efd;
+    color: #f4f4f4;
+    border-radius: 5px;
+    border-style: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin-top: 1rem;
+    position: absolute; 
+    top: 65%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+  #presentation button:hover {
+    background-color: #1e1e1e;
+  }
+  
+  /* apropos Section */
+  #apropos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  #apropos:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  #partiegauche {
+    flex: 1;
+    text-align: left;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 8rem;
+  }
+  
+  #partiegauche h2 {
+    font-size: 2.5rem;
+    color: #1e1e1e;
+  }
+  
+  #partiegauche #underline {
+    width: 100%;
+    height: 4px;
+    background: #0d6efd;
+    margin-bottom: 1rem;
+  }
+  
+  #partiegauche p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  #partiedroite {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1rem;
+  }
+  
+  #partiedroite .profile-img {
+    width: 90%; /* Réduit la largeur pour éviter le dépassement */
+    max-width: 450px; /* Taille max pour éviter qu'elle dépasse trop */
+    border-radius: 5px;
+    margin-left: 0; /* Aligne l'image à gauche du conteneur */
+    margin-bottom: 1rem; /* Espacement en bas de l'image */
+    align-self: flex-start; /* Aligne l'image au début */
+    object-fit: cover; /* l'image garde de bonnes proportions sans déformation */
+  }
+  
+  #partiedroite h3 {
+    font-size: 1.8rem;
+    color: #1e1e1e;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  #skills {
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .skill {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .skill span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .progress {
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 5px;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    border-radius: 5px;
+  }
+  
+  .progress-bar.html { width: 90%; background: #ff5733; }
+  .progress-bar.css { width: 80%; background: #61dafb; }
+  .progress-bar.js { width: 70%; background: #f7df1e; }
+  .progress-bar.php { width: 60%; background: green; }
+  .progress-bar.react { width: 50%; background: #0d6efd; }
+  
+    /* Responsive pour écrans plus petits */
+    @media (max-width: 900px) {
+      #apropos {
+          flex-direction: column;
+          align-items: center;
+      }
+    
+      #apropos {
+          width: 80%; /* Ajuste la largeur des blocs en mode mobile */
+      }
+    
+      #presentation h1 {
+          height: 100px; /* Ajuste la hauteur des images en mobile */
+          width: 100%;
+      }
+  
+      #presentation h2 {
+        font-size: 25px;
+        height: 20px; /* Ajuste la hauteur des images en mobile */
+        width: 100%;
+      }    
+    }
+    

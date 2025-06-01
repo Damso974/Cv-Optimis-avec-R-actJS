@@ -1,0 +1,131 @@
+
+/* Bannière */
+.banner {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Contenu principal */
+.realisations-main {
+    padding: 20px;
+    text-align: center;
+}
+
+.realisations-main h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.realisations-main p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.blue-line {
+    width: 20%;
+    margin: 20px auto;
+    border: none;
+    border-top: 3px solid #0d6efd;
+}
+
+/* Section des réalisations */
+.realisations-blocks {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px; /* Ajoute un espace entre les blocs */
+    flex-wrap: wrap; /* Permet une bonne adaptation en responsive */
+    margin-top: 0px;
+
+}
+
+.realisations-block {
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Permet d'éviter que l'image dépasse du bloc */
+    
+}
+
+/* Image des réalisations */
+.realisations-block img {
+    width: 100%; /* Remplit tout le bloc */
+    height: 100%; /* Assure que l'image prend toute la hauteur du bloc */
+    object-fit: cover; /* Assure que l’image couvre bien tout sans déformation */
+    border-radius: 8px;
+    display: block; /* Enlève les espaces inutiles */
+}
+
+/* Titre et description */
+.realisations-block h2 {
+    color: #333;
+    margin-top: 10px;
+    z-index: 1; /* Texte au-dessus de l'image */
+}
+
+.realisations-block p {
+    color: #666;
+    font-size: 1rem;
+    z-index: 1; /* Texte au-dessus de l'image */
+}
+
+
+/* Responsive pour écrans plus petits */
+@media (max-width: 900px) {
+    .realisations-blocks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .realisations-block {
+        width: 80%; /* Ajuste la largeur des blocs en mode mobile */
+    }
+
+    .realisations-block img {
+        height: 200px; /* Ajuste la hauteur des images en mobile */
+    }
+}
+
+/* Bouton "Lire la suite" */
+.voir-btn {
+    font-size: 0.9rem; /* Réduit la taille du texte */
+    padding: 5px 15px; /* Réduit l'espace intérieur */
+    border: 2px solid #0d6efd; /* Contour bleu */
+    background-color: #0d6efd !important; /* Fond bleu */
+    color: white !important; /* Texte en blanc */
+    cursor: pointer;
+    border-radius: 5px; /* Coins arrondis */
+    margin-top: auto; /* Le maintient en bas du bloc */
+    align-self: center; /* Centre le bouton */
+    text-align: center; /* Aligne le texte */
+    display: inline-block; /* S'assurer qu'il est un bouton cliquable */
+}
+
+.voir-btn:hover {
+    background-color: #0056b3 !important; /* Bleu plus foncé au survol */
+    border-color: #0056b3 !important; /* Bordure plus foncée au survol */
+}
+
+
+/* Bloc rectangulaire fin sous chaque réalisation */
+.realisations-block-footer {
+    width: 100%;
+    background: #f0f0f0; /* Gris clair */
+    padding: 5px 0; /* Hauteur fine */
+    text-align: center;
+    margin-top: 10px;
+}
+
+.realisations-block-footer p {
+    font-size: 0.9rem;
+    color: #333;
+    margin: 0;
+}
